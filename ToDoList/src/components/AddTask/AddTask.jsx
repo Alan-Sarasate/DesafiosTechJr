@@ -7,23 +7,20 @@ function AddTask(){
 
     const [lista, setLista] = useState([])
     const [text, setText] = useState("")
-    const [key, setkey] = useState(0)
     const textInput = useRef(null)
 
     
     function adicionarTask(e){
         e.preventDefault()
         if(!text) return
-        setLista(novaLista => [...novaLista, {elementText: text, id: key}])
-        setText("")
+        setLista(antigaLista => [...antigaLista, {elementText: text}])
         textInput.current.value = ""
-        setkey(key+1)
     }
 
     function removerTask(id){
-        const novaLista = [...lista]
-        const listaFiltrada = novaLista.filter((item)=>(
-            item.id !== id? item : null
+        const antigaLista = [...lista]
+        const listaFiltrada = antigaLista.filter((item, i)=>(
+            i !== id 
             ))
         setLista(listaFiltrada)
     }
@@ -31,15 +28,15 @@ function AddTask(){
     return(
         <div className="addTask-container">
             <h2 className="addTask-title">Minhas tasks</h2>
-            <form className="addTask-form">
+            <form className="addTask-form" onSubmit={adicionarTask}>
                 <input ref={textInput} onChange={(e)=>setText(e.target.value)} type="text" className="addTask-text-input" placeholder="Adicione um novo todo"/>
-                <button className="addTask-button" onClick={adicionarTask}>
+                <button className="addTask-button" type="submit">
                     <img src={AddIcon} alt="add Icon" className="addTask-img"/>
                 </button>
             </form>
             <div className="addTask-box">
-                {lista.map(item => (
-                    <Task key={item.id} task={item} remove={removerTask}/>
+                {lista.map((item, i) => (
+                    <Task key={i} task={item} remove={()=>removerTask(i)}/>
                 ))}
             </div>
         </div>
