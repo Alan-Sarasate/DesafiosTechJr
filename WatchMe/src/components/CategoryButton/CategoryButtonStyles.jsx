@@ -25,7 +25,7 @@ export const StyledCategoryButton = styled.button`
         background-color: #53545c;
     }
 
-    img{
+    svg{
         width: 20px;
         height: 20px;
     }

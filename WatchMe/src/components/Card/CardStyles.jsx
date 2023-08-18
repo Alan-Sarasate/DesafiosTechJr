@@ -30,6 +30,7 @@ export const MovieTitle = styled.span`
     color: #ffffff;
     font-weight: 600;
     padding: 0 6px;
+    width: 100%;
 `
 
 export const MovieSpecifications = styled.div`
@@ -44,10 +45,12 @@ export const MovieSpecifications = styled.div`
     flex-wrap: wrap;
     margin: 5px 0;
 
-    img{
+    svg{
+        color: #ffee06;
         height: 20px;
         width: 20px;
         opacity: 1;
         margin-left: 2px;
     }
+
 `

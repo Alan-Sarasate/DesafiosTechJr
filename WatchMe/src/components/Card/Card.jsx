@@ -1,6 +1,5 @@
 import { CardBox, MovieSpecifications, MovieTitle, SpecificContent } from "./CardStyles";
-import StarIcon from "../../assets/starIcon.svg"
-import Clockicon from "../../assets/clockIcon.svg"
+import { AiOutlineStar, AiOutlineClockCircle } from 'react-icons/ai'
 
 export default function Card({cardImage, title, note, duration}){
 
@@ -10,12 +9,12 @@ export default function Card({cardImage, title, note, duration}){
             <SpecificContent>
                 <MovieTitle>{title}</MovieTitle><br/>
                 <MovieSpecifications>
-                    <img src={StarIcon} alt="Star"/>
-                    {note}/10
+                    <AiOutlineStar/>
+                    {note}
                 </MovieSpecifications>
                 <MovieSpecifications>
-                    <img src={Clockicon} alt="Star"/>
-                    {duration} min
+                    <AiOutlineClockCircle/>
+                    {duration}
                 </MovieSpecifications>
                 
             </SpecificContent>

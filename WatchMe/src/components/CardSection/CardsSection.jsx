@@ -9,8 +9,8 @@ export default function CardsSection({movieGenre, movies}){
                 <StyledH1>Categorias: <span>{`${movieGenre}`}</span></StyledH1>
             </TitleBox>
             <CardsBox>
-                {movies.map((movie) => (
-                  <Card title={movie.titulo} cardImage={movie.poster} note={movie.nota} duration={movie.duracao}/>
+                {movies.map((movie, index) => (
+                  <Card title={movie.Title} cardImage={movie.Poster} note={movie.Ratings[0].Value} duration={movie.Runtime} key={index}/>
                 ))}
             </CardsBox>
         </StyledCardsSection>
