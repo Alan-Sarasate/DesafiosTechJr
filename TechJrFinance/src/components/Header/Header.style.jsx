@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const HeaderWrapper = styled.header`
     width: 100%;
-    height: 152px;
     background-color: ${function (props) {  return props.theme.colors.primaryColor } };
     padding: 0 100px;
     display: flex;
@@ -22,7 +21,7 @@ export const HeaderWrapper = styled.header`
     }
     @media (min-width: 900px){
         padding: 0 100px;
-        height: 152px
+        height: 212px
     }
 `
 
@@ -74,6 +73,11 @@ export const NewTransitionButton = styled.button`
     color: #FFFFFF;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
+
+    &:hover{
+        opacity: 0.8;
+    }
 
     @media (min-width: 320px){
         width: 130px;
@@ -89,5 +93,14 @@ export const NewTransitionButton = styled.button`
         height: 44px;
     }
     
+`
+
+export const CardsSection = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    top: 60px;
 `
 
