@@ -102,5 +102,10 @@ export const CardsSection = styled.div`
     justify-content: space-between;
     position: relative;
     top: 60px;
+
+    @media (min-width: 320px){
+        overflow-y: hidden;
+        gap: 30px;
+    }
 `
 
