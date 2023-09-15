@@ -11,6 +11,10 @@ export const CardWrapper = styled.div`
     font-size: 16px;
     line-height: 24px;
     border-radius: 5px;
+
+    @media (min-width: 320px){
+        height: 256px;
+    }
 `
 
 export const TextAndIconBox = styled.div`
