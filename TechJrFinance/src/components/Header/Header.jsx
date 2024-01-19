@@ -17,9 +17,9 @@ export default function Header(){
                 <NewTransitionButton>Nova Transação</NewTransitionButton>
             </LogoBox>
             <CardsSection>
-                <Card Colors={colors}/>
-                <Card Colors={colors}/>
-                <Card Colors={colors}/>
+                <Card Colors={colors} Icon={1} cardLabel={"Entradas"}/>
+                <Card Colors={colors} Icon={2} cardLabel={"Saídas"}/>
+                <Card Colors={colors} Icon={3} cardLabel={"Total"} cardBackground="#33CC95"/>
             </CardsSection>
         </HeaderWrapper>
     )
