@@ -1,20 +1,17 @@
 import styled from "styled-components";
 
 export const CardWrapper = styled.div`
-    width: 352px;
-    height: 156px;
-    background: #fff;
+    min-width: 352px;
+    max-height: 136px;
+    background-color: ${(props => props.color)};
     display: flex;
     flex-direction: column;
-    color: #363F5F;
+    color: ${function (props) {  return props.theme.colors.primaryFontColor } };
     padding: 32px;
     font-size: 16px;
     line-height: 24px;
     border-radius: 5px;
-
-    @media (min-width: 320px){
-        height: 256px;
-    }
+    font-weight: 400;
 `
 
 export const TextAndIconBox = styled.div`
