@@ -10,7 +10,8 @@ function App() {
     colors: {
             primaryColor: '#5429CC',
             secondaryColor: '#D7D7D7',
-            alternativeColor: '#6933FF'
+            alternativeColor: '#6933FF',
+            primaryFontColor: '#363F5F'
     } 
 }
 
