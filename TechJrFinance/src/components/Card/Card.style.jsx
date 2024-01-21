@@ -6,7 +6,7 @@ export const CardWrapper = styled.div`
     background-color: ${(props => props.color)};
     display: flex;
     flex-direction: column;
-    color: ${function (props) {  return props.theme.colors.primaryFontColor } };
+    color: ${(props) =>  props.fontColor };
     padding: 32px;
     font-size: 16px;
     line-height: 24px;
@@ -37,4 +37,5 @@ export const BalanceText = styled.span`
     font-size: 36px;
     line-height: 54px;
     font-weight: 500;
+    color: ${(props) => props.fontColor};
 `
