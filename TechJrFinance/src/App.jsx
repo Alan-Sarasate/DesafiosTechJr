@@ -2,7 +2,8 @@ import { useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 import Header from './components/Header/Header'
 import GlobalStyles from './GlobalStyles'
-import TransitionsSection from './components/TransitionsSection/TransitionsSection'
+import TransactionHeader from './components/TransactionsHeader/TransactionsHeader'
+import TransactionSection from './components/TransactionsSection/TransactionsSection'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,7 +20,8 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Header/>
-      <TransitionsSection/>
+      <TransactionHeader/>
+      <TransactionSection/>
       <GlobalStyles/>
     </ThemeProvider>
   )
