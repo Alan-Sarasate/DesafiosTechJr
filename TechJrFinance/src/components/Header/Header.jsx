@@ -4,12 +4,6 @@ import Card from "../Card/Card";
 
 export default function Header(){
 
-    const colors = {
-        Background: "#fff",
-        Text: "#363F5F",
-        Icon: "#33CC95"
-    }
-
     return (
         <HeaderWrapper>
             <LogoBox>
@@ -17,9 +11,9 @@ export default function Header(){
                 <NewTransitionButton>Nova Transação</NewTransitionButton>
             </LogoBox>
             <CardsSection>
-                <Card Colors={colors} Icon={1} cardLabel={"Entradas"}/>
-                <Card Colors={colors} Icon={2} cardLabel={"Saídas"}/>
-                <Card Colors={colors} Icon={3} cardLabel={"Total"} cardBackground="#33CC95"/>
+                <Card cardIcon={1} cardLabel={"Entradas"} cardFontColor={function (props) {return props.theme.colors.primaryFontColor}}/>
+                <Card cardIcon={2} cardLabel={"Saídas"} cardFontColor={function (props) {return props.theme.colors.primaryFontColor}}/>
+                <Card cardIcon={3} cardLabel={"Total"} cardBackground="#33CC95"/>
             </CardsSection>
         </HeaderWrapper>
     )
