@@ -15,14 +15,12 @@ export const Title = styled.span`
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
-    flex-grow: 8;
     background-color: red;
 `
 export const SecondaryLabel = styled(Title)`
-    flex-grow: 4;
     background-color: green;
+
 `
 export const DateText = styled(Title)`
-    flex-grow: 1;
     background-color: yellow;
 `
